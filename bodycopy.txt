@@ -1,0 +1,30 @@
+RESEARCH PURPOSE AND OBJECTIVES
+
+This project assesses the impact of a new teaching tool that is being deployed in the introductory Computer Science course. The tool is a web site that accepts student submissions for assignments, and automatically tests them for correctness. The students receive feedback moments after submission. They may use that feedback to improve their work, and submit again. We want to study the impact of this tool by comparing student performance on assignments against previous semesters, which used the same assignments, but with no automated feedback system. We hypothesize that students, when using the feedback system, make more submissions per assignment with a higher degree of quality in their final products.    
+
+DESCRIBE RESEARCH METHODS
+
+Analysis will be performed on historic and current course data, with the following protective process. The data include grades the students received on their submissions to assignments, as well as the submissions themselves, which are C source code files. All data will be copied to a single location on a password-encrypted partition of a researcher's computer. That data will be de-identified before analysis will begin, where names and identifying information will be replaced with a coded identifier, or removed.
+Grade data, both current and historic, will be imported as a text file, where names will be replaced with matching coded identifiers. Submissions (C source code files) have two identifiers: (1) folder names with the directory structure, and (2) comments within the code file. They will be de-identified as follows:
+(1) The directory structure will be traversed by a program, written by the researchers, that renames all folders bearing student names with their coded identifiers.
+(2) The entire directory structure will be traversed by another program, also written by the researchers, that removes the student identification comment from each source code file.
+The result of these two programs will be code files that are only identified by what folder they are in, and the folders will be coded. The researchers will manually check that the programs were successful, and that no student names or ID numbers remain in the directory names or code files, and will complete the de-identification manually for any instances the programs missed.
+The key file of coded identifiers to real students names will persist in the event more data must be added at a later time. This key file will be removed from the analysis machine entirely, and will be stored (a) encrypted, (b) on a detached USB drive, and (c) secured in the office of Prof. Martin.
+
+Student assignments will be coded based on a rubric, below. Two forms of analysis will take place: (1) Aggregate analysis, tallying all submissions per assignment, per course offering, resulting in numbers of students who achieved which levels of the rubric in each assignment, and (2) small case studies, where a single student's path through a particular assignment will be qualitatively observed and described.
+Assignment Code Rubric:
+1: Program compiles successfully
+2: Program provides correct output for a given input
+3: Program processes using prescribed method
+
+DESCRIBE PARTICIPANT POPULATION
+
+Past and present students in the indicated sections of 91.101 Computing I:
+Fall 2012 sections 201, 202, 203
+Spring 2012 section 201, 202
+Fall 2011 section 203
+Spring 2011 section 201
+
+Describe how the participants will be recruited: They will not be recruited; all students in the course offerings may be subject to anonymous, retrospective analysis.
+
+
