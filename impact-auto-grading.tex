@@ -1,0 +1,76 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Impact of Auto-Grading of an Introductory Computing Course}
+\author{Mark Sherman \and Nat Tuck \and Derrell Lipman \and Sarita Bassil \and Fred Martin}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+%\subsection{}
+
+\section{Technical Description of Bottlenose}
+
+Our web application, Bottlenose, was initially developed to support
+the teaching of a ``flipped'' course, where students would watch video
+lectures online before class to prepare for classroom questions and
+discussion. The design of Bottlenose also called for online submission
+and grading of programming assignments, which turns out to be a useful
+piece of functionality even for traditional courses.
+
+Bottlenose is built using the Ruby on
+Rails\footnote{http://rubyonrails.org/} web application devopment
+framework. This framework has allowed the application to be built
+rapidly, but also provides built in automated testing infrasture which
+should help the application stay high quality and maintainble as it
+grows. The application follows standard Rails conventions. A
+PostgreSQL\footnote{http://postgres.org/} database to store most
+application state, although student submissions are stored on the file
+system.
+
+A simple process for online submission of assignments is
+provided. Each student is emailed an authentication link which brings
+the to their list of assignments and identifies them to the
+application. Assignments are submitted by uploading the programming
+code directly in their web browser. Both single-file assignments and
+more complicated assignments (submitted as a gzipped tarball) are
+supported. The automated grading process begins immediately when an
+assignment is submitted, giving students feedback within a few
+seconds.  Students may attempt submissions multiple times.
+
+In order to automatically grade student programs, submissions are
+compiled and run on the server. Allowing students to run arbitrary
+code on the server is clearly a potential security issue, so
+Bottlenose uses a sandbox mechanism to prevent student programs from
+causing problems. Five major techniques are used to isolate student
+programs from the rest of the system:
+
+\begin{enumerate}
+\item \textbf{Separate system user} - Each student program is run under
+  a separate system user with minimal Unix permissions.
+\item \textbf{Run in a ``chroot''} - Student programs can only access
+  specific, whitelisted parts of the file system.
+\item \textbf{Resource limits} - The ``setrlimit'' system call is used to
+  set limits on the use of a variety of resources, including RAM, child
+  processes, and created file size.
+\item \textbf{Isolated working directory} - Each program is executed in
+  a separate ``tmpfs'' filesystem which ceases to exist when the grading
+  process finishes.
+\item \textbf{Watchdog timer} - A grading process is terminated if it lasts
+  more than five minutes.
+\end{enumerate}
+
+This sandbox mechanism isn't foolproof, but it has worked reasonably
+well at preventing the grading server from being disrupted by common
+student mistakes like infinite memory allocation loops.
+
+\end{document}  
