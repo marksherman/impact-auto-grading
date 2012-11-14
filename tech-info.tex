@@ -1,38 +1,39 @@
 \section{Technical Description of Bottlenose}
 
 Our web application, Bottlenose, was initially developed to support
-the teaching of a ``flipped'' course, where students would watch video % "would" is subjunctive, likely not appropriate
+the teaching of a ``flipped'' course, where students watch video
 lectures online before class to prepare for classroom questions and
-discussion. The design of Bottlenose also called for online submission % now is past tense
-and grading of programming assignments, which turns out to be a useful
-piece of functionality even for traditional courses.
+discussion. Bottlenose also includes online submission and grading of
+programming assignments, which turns out to be a useful piece of
+functionality even for traditional courses.
 
-Bottlenose is built using the Ruby on                                   % now is present tense
+Bottlenose is built using the Ruby on
 Rails\footnote{http://rubyonrails.org/} web application development
 framework. This framework has allowed the application to be built
-rapidly, but also provides built in automated testing infrastructure which
-should help the application stay high quality and maintainable as it     % should - future subjunctive tense
-grows. The application follows standard Rails conventions. A
-PostgreSQL\footnote{http://postgres.org/} database is used to store most
-application state, although student submissions are stored on the file
-system.
+rapidly, but also provides built in automated testing infrastructure
+which will help the application stay high quality and maintainable as
+it grows. The application follows standard Rails conventions. A
+PostgreSQL\footnote{http://postgres.org/} database is used to store
+most application state, although student submissions are stored on the
+file system.
 
 A simple process for online submission of assignments is
 provided. Each student is emailed an authentication link which brings
 them to their list of assignments and identifies them to the
 application. Assignments are submitted by uploading the programming
-code directly in their web browser. Both single-file assignments and
-more complicated assignments (submitted as a gzipped tarball) are       % "more complicated" is unclear, just say it
-supported. The automated grading process begins immediately when an
-assignment is submitted, giving students feedback within a few
-seconds.  Students may attempt submissions multiple times.
+code directly in their web browser. Both assignments requiring
+submission of a single source file and assignments requiring multiple
+files (submitted as a gzipped tarball) are supported. The automated
+grading process begins immediately when an assignment is submitted,
+giving students feedback within a few seconds.  Students may attempt
+submissions multiple times.
 
 In order to automatically grade student programs, submissions are
 compiled and run on the server. Allowing students to run arbitrary
-code on the server is clearly a potential security issue, so
-Bottlenose uses a sandbox mechanism to prevent student programs from    %weird run-on, maybe fix?
-causing problems. Five major techniques are used to isolate student
-programs from the rest of the system:
+code on the server is clearly a potential security issue.  Bottlenose
+uses a sandbox mechanism to prevent student programs from causing
+trouble. Five major techniques are used to isolate student programs
+from the rest of the system:
 
 \begin{enumerate}
 \item \textbf{Separate system user} - Each student program is run under 
@@ -49,6 +50,8 @@ programs from the rest of the system:
   more than five minutes.
 \end{enumerate}
 
-This sandbox mechanism isn't foolproof, but it has worked reasonably    % "foolproof" unclear
-well at preventing the grading server from being disrupted by common
-student mistakes like infinite memory allocation loops.
+This sandbox mechanism does not provide perfect security, especially
+against a clever student intentionally trying to break
+it. Nevertheless, it has worked reasonably well at preventing the
+grading server from being disrupted by common student mistakes like
+infinite memory allocation loops.
