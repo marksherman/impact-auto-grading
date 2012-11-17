@@ -1,0 +1,59 @@
+\section{Writing Tests}
+
+In preparation for student submissions of assignments to Bottlenose, the
+instructor writes a set of test scripts which automatically evaluate specific
+aspects of students' programs. A test may evaluate, for example, that given
+specific input, the program generates proper output; it may check whether
+certain required functions are provided by the student's program; it can
+determine whether the program exited successfully or crashed; etc.
+
+Tests can be written in any language. The only requirements for tests are that
+they conform to the \textit{Test Anything
+  Protocol}\footnote{http://search.cpan.org/~petdance/Test-Harness-2.64/lib/Test/Harness/TAP.pod}
+(TAP). With TAP, a test outputs an indication of the number of tests that will
+be run, e.g., \textbf{1..4} for four tests, followed by a line of output for
+each test which indicates whether the test, e.g., test \#2, succeeded
+(\textbf{ok 2}) or failed (\textbf{not ok 2}. The tests are otherwise free to
+provide input in any form to the program under test and to retrieve output via
+their standard output mechanism or via a file. Tests are also free to provide
+additional output, such as a description of the test to be run, or student's
+and expected output, when a program does not yield the correct results.
+
+Given the flexibility of this testing harness, it is possible to run some
+interesting tests on students' programs to let them know that they are
+correctly accomplishing their program's goal. While beginning study of heap
+allocation using the \texttt{malloc} and \texttt{free} functions in C, for
+example, we used a test that compiled the student's program into an object
+file, and then used the \textit{objcopy} utility to replace their
+\texttt{main} function with one of the test's own, and to replace their calls
+to \texttt{malloc} and \texttt{free} with calls to alternate function names
+which were defined in the test. In a simple, early heap allocation assignment,
+for example, students were to write a program that allocate one integer of
+heap storage, assigned the number \textbf{6} into that storage, and then free
+the allocated memory. The functions in the test which replaced \texttt{malloc}
+and \texttt{free} were then able to ensure that \texttt{malloc} was being
+called with the correct size, that the correct address was passed to
+\texttt{free}, and that the value \textbf{6} had in fact been put in the
+correct memory location by the student's program. Similarly, the replacement
+functions were able to test that the student's application correctly handled
+an out-of-memory condition as indicated to their program by a NULL return from
+\texttt{malloc}.
+
+As we gained more experience writing tests for Bottlenose, we found that we
+could easily run student programs under \textit{valgrind} with varying options
+to detect different types of student errors. We were able to use \textit{nm}
+to look at their object file to confirm that they were providing the specified
+functions, and even implement unit testing of those specific functions. For
+example, in a bubble sort assignment, the students were required to implement
+a \texttt{swapValues} function to swap two values (for practice passing
+pointers to integers), and a \texttt{bubblesort} function which was required
+to use the \texttt{swapValues} function. The tests for this function were able
+to unit test the students' \texttt{swapValues} functions to confirm correct
+operation, in addition to testing the bubble sort program for correct output
+given various inputs.
+
+%%% where is this discussed?
+%Student projects are submitted to Bottlenose by uploading either a single
+%source file, or an archive file (gzipped tar format) containing a set of files
+%comprising the submission.
+
