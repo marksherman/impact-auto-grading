@@ -32,3 +32,5 @@ impact-auto-grading.pdf
 *.vrb
 *.xdy
 *.tdo
+
+images/.DS_Store
