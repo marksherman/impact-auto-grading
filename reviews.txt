@@ -1,0 +1,233 @@
+
+<!--REVIEW-->
+Reviewer=6028
+
+Paper=1046:Impact of Auto-Grading on an Introductory Computing Course
+
+Importance of the topic to C.S. Education: Moderately important
+
+
+Interest in the topic/Timeliness: Little
+
+
+Originality of the paper: Not original
+
+
+Is this paper technically sound and accurate: Good
+
+
+	We have been using automatic submission/testing for all of our CS classes for over 15 years. There is nothing novel about the approach.
+	
+	I do not understand the point of the results. It looks like the authors are trying to show students do not use an automatic system as a substitute for testing their code? It is not clear.
+
+
+Overall Organization: Good
+
+
+Clarity of the language: Good
+
+
+Readability of the paper: Good
+
+
+	The paper is well written. However, it is not clear what the result are that are presented.
+
+
+Your Recommendation: Definitely Reject
+
+
+	There is nothing new to present here. We have been using electronic submission/testing/grading for over 15 years.
+
+
+If reject, do you recommend resubmission as a poster?:  N/A
+
+
+Referee's Familiarity With Topic of Paper: Very confident - I am an expert in this area
+
+
+Modifications: (If Conditionally Accepted)
+
+	Nothing entered.
+
+
+Confidential Note: (Read only by program chairs)
+
+	Nothing entered.
+
+<!--REVIEW--->
+
+
+<!--REVIEW-->
+Reviewer=6009
+
+Paper=1046:Impact of Auto-Grading on an Introductory Computing Course
+
+Importance of the topic to C.S. Education: Moderately important
+
+
+Interest in the topic/Timeliness: Moderate
+
+
+Originality of the paper: Moderately original
+
+
+Is this paper technically sound and accurate: Good
+
+
+	The task of evaluating programming submissions is needed in every CS department; automating that process would be of significant interest. The authors go into significant detail about how they went about their automation and reference a number of other automated systems. The conclusion drawn is relatively weak, but there are no attempts to "stretch" the data to say something that's not there.
+
+
+Overall Organization: Good
+
+
+Clarity of the language: Good
+
+
+Readability of the paper: Average
+
+
+	Structured well, with visual elements interspersed throughout. Some spelling/grammar errors that should have been caught by proofreaders.
+
+
+Your Recommendation: Definitely Accept
+
+
+	Solidly written on a topic of interest.
+
+
+If reject, do you recommend resubmission as a poster?:  N/A
+
+
+Referee's Familiarity With Topic of Paper: Confident - I am reasonably knowledgeable in this area
+
+
+Modifications: (If Conditionally Accepted)
+
+	Nothing entered.
+
+
+Confidential Note: (Read only by program chairs)
+
+	Nothing entered.
+
+<!--REVIEW--->
+
+
+<!--REVIEW-->
+Reviewer=6022
+
+Paper=1046:Impact of Auto-Grading on an Introductory Computing Course
+
+Importance of the topic to C.S. Education: Very important
+
+
+Interest in the topic/Timeliness: Great
+
+
+Originality of the paper: Very original
+
+
+Is this paper technically sound and accurate: Excellent
+
+
+	Explanation of previous work and how it is building block of the new work:  
+	This article gives a clear and in depth discussion of the current situation and the problems associated with the issue.  The article is also supported with relevant literature regarding the current situation.  Based on the explanations given in the article, the introduction of the new model was clearly understandable.
+	Detailed definitions and descriptions of the new model and the value it brings to the current grading and feedback to students in a computer science course was done very well.
+	The article documented and defined the impact and flexibility of this model: - did a good job  
+	Good use of examples in explanation of new model and how it could be incorporated in to various programming courses.
+
+
+Overall Organization: Good
+
+
+Clarity of the language: Good
+
+
+Readability of the paper: Good
+
+
+	Good use of examples in explanation of new model and how it could be incorporated in to various programming courses.
+	Paper was written and organized well.
+	Good list of references
+
+
+Your Recommendation: Definitely Accept
+
+
+	The implementation of this new feedback and grading model brings new perspectives on computing pedagogical development.
+	I definitely feel that the information and topic in this article adds to the area of Computer Science Education.
+
+
+If reject, do you recommend resubmission as a poster?:  N/A
+
+
+Referee's Familiarity With Topic of Paper: Confident - I am reasonably knowledgeable in this area
+
+
+Modifications: (If Conditionally Accepted)
+
+	None
+
+
+Confidential Note: (Read only by program chairs)
+
+	None
+
+<!--REVIEW--->
+
+
+<!--REVIEW-->
+Reviewer=6012
+
+Paper=1046:Impact of Auto-Grading on an Introductory Computing Course
+
+Importance of the topic to C.S. Education: Moderately important
+
+
+Interest in the topic/Timeliness: Moderate
+
+
+Originality of the paper: Very original
+
+
+Is this paper technically sound and accurate: Good
+
+
+	Automated grading systems are of interest for a variety of reasons, as outlined in the paper.  The authors describe the features of their system and give an analysis of data collected by the system and from previous offerings of the course where the automated system was not used.  Providing immediate feedback to the students is a huge plus, and the system collects the submissions for subsequent manual review.  The authors detail how the tests in their system can be set up in interesting ways to thoroughly test the submitted code.  I believe that their work will be of interest to many of the conference attendees.
+
+
+Overall Organization: Good
+
+
+Clarity of the language: Good
+
+
+Readability of the paper: Good
+
+
+	Well-written and organized.
+
+
+Your Recommendation: Lean to Accept
+
+
+	The paper was interesting, but it leaves me with some questions.  Was there a significant difference in overall student performance (on the assignments involved and/or other graded work, e.g. exams)?  Were any mechanisms put in place to detect academic dishonesty, similar to turnitin.com?  Is the system available for use by other institutions?  Such questions could be asked of the authors when they present.
+
+
+If reject, do you recommend resubmission as a poster?:  N/A
+
+
+Referee's Familiarity With Topic of Paper: Somewhat confident - I have some knowledge in this area
+
+
+Modifications: (If Conditionally Accepted)
+
+	A couple of typos ...  There's a [0] citiation on page 1.  Page 3, next to the last line, I suspect that the word 'than' was meant to the 'that'.  If not, there's something else wrong in the sentence.
+
+
+Confidential Note: (Read only by program chairs)
+
+	Nothing entered.
+
+<!--REVIEW--->
+
