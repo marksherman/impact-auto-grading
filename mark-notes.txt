@@ -15,6 +15,10 @@ Mulhern 1
 	Relax off actual analysis tricks (objcopy, nm, etc), focusing on high-level concepts
 		mention source code transformation
 		"Analyze student code to determine whether their procedure's have the signatures required by the assignment" is more general and more meaningful than "use nm to look at their object file"
+		
+		I think it should be honestly stated that this is a Linux-based system. But then statements like "Run in a 'chroot''" which are obviously Linuxy and extremely idiomatic could be made more general. This way one can at least
+		claim that the idea is extensible. I would stay away from explicitly mentioning Linux system calls in general.
+		
 	
 		Maybe a better sell is:
 		1) There are a lot of great tools for analyzing and verifying C out there.
@@ -42,8 +46,6 @@ I think I know that WebCat tests student submissions against other student tests
 >>Does not answer "how", just "who", in this form, which is better. I don't want to expand this into a bitchfest of all the problems with the existing stuff.
 >> added this: These systems were built to fit the nuances of a particular course or department, which made them difficult to customize and deploy into different environments. We created a system that is a general-purpose testing and evaluation platform for coursework that is devoid of language and testing preferences.
 
-I think it should be honestly stated that this is a Linux-based system. But then statements like "Run in a 'chroot''" which are obviously Linuxy and extremely idiomatic could be made more general. This way one can at least
-claim that the idea is extensible. I would stay away from explicitly mentioning Linux system calls in general.
 
 I would avoid mentioning that Bottlenose does actually have some  tests as in the phrase "which has helped the application stay high
 quality and maintainable as it grew". It's for the users to decide the quality and the developers to cope with the maintainability or lack thereof.
