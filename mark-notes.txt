@@ -12,12 +12,7 @@ Figure 1 :
 		collapse each student= subs/assignments (decimal number)
 	perhaps collapse M's and A's into single thing
 
-Mulhern 1
-	
-	Relax off actual analysis tricks (objcopy, nm, etc), focusing on high-level concepts
-		mention source code transformation
-		"Analyze student code to determine whether their procedure's have the signatures required by the assignment" is more general and more meaningful than "use nm to look at their object file"
-		
+Mulhern 1		
 		Maybe a better sell is:
 		1) There are a lot of great tools for analyzing and verifying C out there.
 		2) We'ld like introductory programming students to get the benefit of these tools.
@@ -31,31 +26,6 @@ Mulhern 1 - don't know how to deal with:
 	In response to the comparison of the results at the end I think a cynical person would say that you are unfairly comparing two different forms of submission. You can not tell whether or not the students are revising multiple times before they hand in with submit, it may be that the quality of their revisions is actually much lower with Bottlenose than with submit.
 	
 ** Mulhern 2 (technical) **
-
-The sentence "The development of this system was informed by other state-of-the-art
-systems developed at other universities, such as BOSS [5], CourseMarker [3], and Web-
-Cat [2]." seems like troublesome filler.
-The question that a reader like myself would ask immediately is "How?" and the answer is certainly not in the paper as it stands.
-The reader would also wonder about the purpose of the adjective "state-of-the-art".
-I think I know that WebCat tests student submissions against other student tests in Java --- I believe they do a lot of clever work using reflection to pull this off and that I talked to some people at SIGCSE about that.
->>Easy answer: The development of this system was informed by researching systems developed at other universities, such as BOSS [5], CourseMarker [3], and Web-Cat [2]. 
->>Does not answer "how", just "who", in this form, which is better. I don't want to expand this into a bitchfest of all the problems with the existing stuff.
->> added this: These systems were built to fit the nuances of a particular course or department, which made them difficult to customize and deploy into different environments. We created a system that is a general-purpose testing and evaluation platform for coursework that is devoid of language and testing preferences.
-
-Verbs that describe the behavior of a currently existing software tool should be in the present, not the past tense.
-For example, "Each student program was run under a separate system user
-with minimal Unix permissions." should be "Each student program is run under a separate system user
-with minimal Unix permissions."
-
-Actually this should probably be restated as:
-"Each student program is run as a separate user process."
-"minimal Unix permissions" may not be a generally agreed upon quantity and is not very general either.
-
-In the "Writing Tests" section it would be much more valuable to try to explain the type of feedback that students might receive
-rather than to focus on the mechanisms for obtaining information from their code.
-
-In the same spirit, if mentioning valgrind some remark on what kind of errors were reported to the students from valgrind's rather copious output
-would be more valuable than just mentioning that it was used.
 
 This sentence "Students with zero submissions,
 instructors, administrators, and other non-students were removed from the data." is meant to be just descriptive but confuses me a bit.
