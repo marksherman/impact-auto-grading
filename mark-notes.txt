@@ -24,15 +24,3 @@ CONCLUSIONS
 
 Mulhern 1 - don't know how to deal with:
 	In response to the comparison of the results at the end I think a cynical person would say that you are unfairly comparing two different forms of submission. You can not tell whether or not the students are revising multiple times before they hand in with submit, it may be that the quality of their revisions is actually much lower with Bottlenose than with submit.
-	
-** Mulhern 2 (technical) **
-
-This sentence "Students with zero submissions,
-instructors, administrators, and other non-students were removed from the data." is meant to be just descriptive but confuses me a bit.
-It seems unnecessary to mention cleanup of the data to remove, e.g., instructor submissions, but it is questionable
-to remove students with zero submissions. That probably needs to be justified as for example, "Student who never submitted
-code during the semester were not considered to be participating in the class for the purpose of this study." I guess that does make them non-students. ;>
-
-This sentence "Sadly, many students do not submit for every assignment, bringing down the average
-submission rates." is ambiguous, because it could mean that many students never bother to submit a single assignment all
-semester, but it could also mean that for a given assignment some students don't submit at all.
