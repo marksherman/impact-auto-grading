@@ -5,6 +5,7 @@ Make tables higher-res
 Table 1 add #submits, #students columns
 
 BIG QUESTION: description of system: should be present-tense? makes sense. All data/study remains past-tense.
+>> YES -mulhern
 
 Figure 1 :
 	Instead of histogram, show a distro curve for each section
@@ -31,8 +32,6 @@ Mulhern 1 - don't know how to deal with:
 	
 ** Mulhern 2 (technical) **
 
->>The phrase "after completing some number of successive assignments" is almost certainly intended to be "after completing a number of subsequent assignments". DONE
-
 The sentence "The development of this system was informed by other state-of-the-art
 systems developed at other universities, such as BOSS [5], CourseMarker [3], and Web-
 Cat [2]." seems like troublesome filler.
@@ -51,11 +50,6 @@ with minimal Unix permissions."
 Actually this should probably be restated as:
 "Each student program is run as a separate user process."
 "minimal Unix permissions" may not be a generally agreed upon quantity and is not very general either.
-
-The phrase "this sandbox mechanism did not provide perfect security" is an odd one since it is followed in the same sentence
-by "we have not yet identified any such vulnerability". The sentence is internally contradictory. Maybe it would be better if
-shortened to "This sandbox mechanism may be vulnerable
-to a clever student intentionally trying to defeat it. To date, we have not identified any exploit."
 
 In the "Writing Tests" section it would be much more valuable to try to explain the type of feedback that students might receive
 rather than to focus on the mechanisms for obtaining information from their code.
